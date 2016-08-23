@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='mkDOCter',
-    version='1.0',
+    version='1.0.1',
     url='https://github.com/willbarton/mkDOCter',
     license='CC0',
     description='mkdocs theme based on DOCter',
