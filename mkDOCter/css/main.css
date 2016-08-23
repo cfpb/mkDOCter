@@ -29,6 +29,10 @@ html, body {
     height: 100%;
 }
 
+img {
+  max-width: 100%;
+}
+
 /*
 Typography
 ==================================
@@ -96,6 +100,21 @@ li h4 {
 
 li p {
     margin-top: 0;
+}
+
+/*
+Tables
+--------------------------------
+*/
+
+table, th, td {
+  border: 1px solid #E3E4E5;
+}
+th, td {
+  padding: 0.5em;
+}
+th { 
+  background-color: #F8F8F8;
 }
 
 /*
@@ -384,6 +403,32 @@ ul.repo-list {
 
 .repo-list h4 {
     text-transform: none;
+}
+
+/*
+Admonitions
+----------------------------------
+*/
+.admonition {
+  border-width: 1px;
+  border-style: solid;
+  padding: 0 1em;
+}
+.admonition .admonition-title {
+  font-weight: 600;
+}
+
+.admonition.danger {
+  border-color: #D12124;
+  background-color: #F6D9D3;
+}
+.admonition.warning {
+  border-color: #FF9E1B;
+  background-color: #FFECD1;
+}
+.admonition.note {
+  border-color: #0072CE;
+  background-color: #CCE3F5;
 }
 
 /*
