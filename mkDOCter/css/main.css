@@ -207,7 +207,7 @@ ul.secondary-nav {
 .sidebar-nav a.sidebar-nav-active {
   color: #101820;
   background-color: transparent;
-  border-left: 5px solid #2CB34A;
+  border-left: 5px solid #B3B3B3;
 }
 .sidebar-nav li:last-child {
   border-bottom: none;
@@ -245,7 +245,7 @@ section:before {
 
 header {
     width: 100%;
-    border-bottom: 5px solid #2CB34A;
+    border-bottom: 5px solid #B3B3B3;
     background-color: #fff;
     padding: 2em 0;
 }

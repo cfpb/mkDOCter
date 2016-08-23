@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-  <head>
+<head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,6 +14,22 @@
     <link rel="stylesheet" href="{{ base_url }}/css/normalize.css">
     <link rel="stylesheet" href="{{ base_url }}/css/main.css">
     <link rel="stylesheet" href="{{ base_url }}/css/syntax.css">
+    {# Set the brand_color #}
+
+    {% if config.extra.brand_color %}
+    <style type="text/css">
+        .sidebar-nav a:hover,
+        .sidebar-nav a:focus,
+        .sidebar-nav a:active,
+        .sidebar-nav a.sidebar-nav-active {
+            border-left-color: {{ config.extra.brand_color }};
+        }
+        header {
+            border-bottom-color: {{ config.extra.brand_color }};
+        }
+    </style>
+    {% endif %}
+
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
       <script src="{{ base_url }}/js/respond.min.js"></script>
@@ -24,13 +40,16 @@
     {%- endfor %}
 
     {%- block extrahead %} {% endblock %}
-  </head>
+</head>
 
 <body>
+    
     <div class="container">
         <header role="banner">
             <div class="wrap">
-                <img class="logo" src="{{ base_url }}/img/logo_210.png" alt="Consumer Financial Protection Bureau">
+                {% if config.extra.logo_url %}
+                <img class="logo" src="{{ config.extra.logo_url }}" alt="{% if config.extra.logo_alt %}{{ config.extra.logo_alt }}{% else %}Logo{% endif %}">
+                {% endif %}
                 <h1 class="site-title"><a class="title-link" href="{{ base_url }}/">{{ site_name }}</a></h1>
             </div>
         </header>

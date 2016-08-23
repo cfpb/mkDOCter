@@ -19,6 +19,23 @@ Once installed, you can add mkDOCter to your mkdocs configuraiton file:
 theme: mkDOCter
 ```
 
+## Configuration
+
+mkDOCter has a few config extras to customize its appearances:
+
+```
+extras:
+    brand_color: "#1096CF"
+    logo_url: http://xmlsoft.org/catalog.gif
+    logo_alt: My Awesome Logo
+```
+
+*`brand_color`* controls the header and sidebar accent lines.
+
+*`logo_url`* is the URL to a logo to display in the top right.
+
+*`logo_alt`* is the alt text for the logo.
+
 ## License
 
 The project is in the public domain, and all contributions to it will be
