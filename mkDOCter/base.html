@@ -14,10 +14,10 @@
     <link rel="stylesheet" href="{{ base_url }}/css/normalize.css">
     <link rel="stylesheet" href="{{ base_url }}/css/main.css">
     <link rel="stylesheet" href="{{ base_url }}/css/syntax.css">
-    {# Set the brand_color #}
+    {# Set the brand customizations #}
 
-    {% if config.extra.brand_color %}
     <style type="text/css">
+        {% if config.extra.brand_color %}
         .sidebar-nav a:hover,
         .sidebar-nav a:focus,
         .sidebar-nav a:active,
@@ -27,8 +27,12 @@
         header {
             border-bottom-color: {{ config.extra.brand_color }};
         }
+        {% endif %}
+        {% if config.extra.brand_font_family %}
+
+        {% endif %}
     </style>
-    {% endif %}
+
 
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -43,7 +47,7 @@
 </head>
 
 <body>
-    
+
     <div class="container">
         <header role="banner">
             <div class="wrap">
@@ -53,7 +57,7 @@
                 <h1 class="site-title"><a class="title-link" href="{{ base_url }}/">{{ site_name }}</a></h1>
             </div>
         </header>
-    
+
         <div class="wrap content">
             <aside>
                 <nav class="sidebar-nav" role="navigation">
@@ -69,7 +73,7 @@
                                 </li>
                                 {% endfor %}
                             </ul>
-                            {% else %} 
+                            {% else %}
                             <a href="{{ nav_item.url }}" class="{% if nav_item.active%}sidebar-nav-active{%endif%}">{{ nav_item.title }}</a>
 
                             {% endif %}
@@ -91,7 +95,7 @@
                 <p>Hosted on <a href="http://pages.github.com/">GitHub Pages</a>.</p>
             </div>
         </footer>
-    </div> 
+    </div>
 </body>
 </html>
 {% if current_page and current_page.is_homepage %}

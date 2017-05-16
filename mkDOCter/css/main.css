@@ -40,9 +40,10 @@ Typography
 
 body {
     font-family: "Avenir Next", Arial, sans-serif;
-    font-weight: 400;
     font-style: normal;
-    line-height: 1.466666667;
+    font-weight: 400;
+    font-size: 100%;
+    line-height: 1.375;
 }
 
 h1,
@@ -64,16 +65,39 @@ strong {
     display: inline-block;
 }
 
+h1 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.125em;
+    line-height: 1.25;
+    margin-bottom: .882em;
+}
+
 h2 {
     font-weight: 400;
     font-style: normal;
+    font-size: 1.625em;
+    border-bottom: 1px solid #e7e8e9;
+    padding-bottom: 15px;
+    margin-top: 1em;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: .682em;
     font-size: 1.375em;
-    margin: 1.4em 0 0 0;
+    line-height: 1.25;
 }
 
 h4 {
-    font-size: 1em;
-    text-transform: uppercase;
+    font-family: AvenirNextLTW01-Medium,Arial,sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    margin-bottom: .833em;
+    font-size: 1.125em;
+    line-height: 1.25;
 }
 
 .page-title {
@@ -85,21 +109,20 @@ Lists
 --------------------------------
 */
 
-.main-content ul {
+dl,
+menu,
+ol,
+ul {
+  margin: 1em 0;
+}
+dd {
+  margin: 0 0 0 40px;
+}
+.main-content ol, .main-content ul {
     padding-left: 1.1em;
 }
-
 .main-content li {
     margin-bottom: 1em;
-}
-
-li h3,
-li h4 {
-    margin: 0;
-}
-
-li p {
-    margin-top: 0;
 }
 
 /*
@@ -113,7 +136,7 @@ table, th, td {
 th, td {
   padding: 0.5em;
 }
-th { 
+th {
   background-color: #F8F8F8;
 }
 
@@ -361,10 +384,20 @@ pre {
     max-width: 100%;
     font-size: 0.875em;
     overflow-y: scroll;
-    background-color: #f1f2f2;
+    background-color: #f7f8f9;
     padding: 10px;
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
 }
-
+code {
+    padding: 0;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    margin: 0;
+    font-size: 85%;
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    background-color: #f7f8f9;
+    border-radius: 3px;
+}
 /*
 Post list
 ----------------------------------
@@ -410,25 +443,27 @@ Admonitions
 ----------------------------------
 */
 .admonition {
-  border-width: 1px;
-  border-style: solid;
-  padding: 0 1em;
+  border-left-width: 5px;
+  border-left-style: solid;
+  padding: 0.0125em 1em;
+  font-size: 0.875em;
+  margin-left: 1em;
 }
 .admonition .admonition-title {
   font-weight: 600;
 }
 
 .admonition.danger {
-  border-color: #D12124;
-  background-color: #F6D9D3;
+  border-left-color: #d14124;
+  background-color: #f7e0d9;
 }
 .admonition.warning {
-  border-color: #FF9E1B;
-  background-color: #FFECD1;
+  border-left-color: #ff9e1b;
+  background-color: #fff0dd;
 }
 .admonition.note {
-  border-color: #0072CE;
-  background-color: #CCE3F5;
+  border-left-color: #0072ce;
+  background-color: #d6e8fa;
 }
 
 /*
@@ -537,7 +572,6 @@ Desktop Styles
         padding: .625em 1em;
         width: 10%;
     }
-
 }
 
 @media screen and (max-width: 54.375em) and (min-height: 32.5em) {
