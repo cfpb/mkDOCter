@@ -9,7 +9,7 @@ except (IOError, ImportError):
 
 setup(
     name='mkDOCter',
-    version='1.0.3',
+    version='1.0.4',
     url='https://github.com/willbarton/mkDOCter',
     license='CC0',
     description='mkdocs theme based on DOCter',
