@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {% block htmltitle %}
-    <title>{% if page_title %}{{ page_title }} - {% endif %}{{ site_name }}</title>
+    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ config.site_name }}</title>
     {% endblock %}
-    {% if page_description %}<meta name="description" content="{{ page_description }}">{% endif %}
+    {% if config.site_description %}<meta name="description" content="{{ config.site_description }}">{% endif %}
 
     <link rel="stylesheet" href="{{ base_url }}/css/normalize.css">
     <link rel="stylesheet" href="{{ base_url }}/css/main.css">
@@ -54,7 +54,7 @@
                 {% if config.extra.logo_url %}
                 <img class="logo" src="{{ config.extra.logo_url }}" alt="{% if config.extra.logo_alt %}{{ config.extra.logo_alt }}{% else %}Logo{% endif %}">
                 {% endif %}
-                <h1 class="site-title"><a class="title-link" href="{{ base_url }}/">{{ site_name }}</a></h1>
+                <h1 class="site-title"><a class="title-link" href="{{ base_url }}/">{{ config.site_name }}</a></h1>
             </div>
         </header>
 
@@ -84,7 +84,7 @@
             </aside>
 
             <section id="main" class="main-content" role="main">
-                {{ content }}
+                {{ page.content }}
             </section>
         </div>
 
@@ -98,7 +98,7 @@
     </div>
 </body>
 </html>
-{% if current_page and current_page.is_homepage %}
+{% if page and page.is_homepage %}
 <!--
 MkDocs version : {{ mkdocs_version }}
 Build Date UTC : {{ build_date_utc }}
